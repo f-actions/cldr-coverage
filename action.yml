@@ -1,18 +1,15 @@
 name: "CLDR Coverage"
 description: "Test fonts for script and writing system coverage based on CLDR data"
-# inputs:
-#   args: # id
-#     description: "Args to the Python script"
-#     required: false
-#     default: "these are test args"
+inputs:
+  filepath: # id
+    description: "Path to a font file"
+    required: true
 
 runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - arg1
-    - arg2
-    - arg3
+    - ${{ inputs.filepath }}
 
 branding:
   icon: "type"
