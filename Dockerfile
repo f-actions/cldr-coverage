@@ -1,6 +1,9 @@
 FROM python:3.8
 
 # set up dependency environment
+RUN sudo apt-get update -y
+RUN sudo apt-get install -y icu-devtools
+RUN export PATH="/usr/local/opt/icu4c/bin:$PATH"
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
