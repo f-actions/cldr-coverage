@@ -76,10 +76,8 @@ def report(scripts, languages, partial):
 
 
 if __name__ == "__main__":
-    for fontpaths in sys.argv[1:]:
-        files = glob.glob(fontpaths)
-        for fontpath in files:
-            print("")
-            font = TTFont(fontpath)
-            print(f"`{fontpath}`:")
-            print(report(*coverage(font)))
+    for fontpath in sys.argv[1:]:
+        print("")
+        font = TTFont(fontpath)
+        print(f"`{fontpath}`:")
+        print(report(*coverage(font)))
