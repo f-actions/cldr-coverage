@@ -1,7 +1,7 @@
 name: "CLDR Coverage"
 description: "Test fonts for script and writing system coverage based on CLDR data"
 inputs:
-  filepath: # id
+  path: # id
     description: "Path to a font file"
     required: true
 
@@ -9,7 +9,7 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ inputs.filepath }}
+    - ${{ inputs.path }}
 
 branding:
   icon: "type"
