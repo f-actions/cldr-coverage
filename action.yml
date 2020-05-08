@@ -1,14 +1,16 @@
 name: "CLDR Coverage"
 description: "Test fonts for script and writing system coverage based on CLDR data"
 # inputs:
-#   path: # id
-#     description: "Path to build artifact testing directory"
+#   args: # id
+#     description: "Args to the Python script"
 #     required: false
-#     default: "build"
+#     default: "these are test args"
 
 runs:
-  using: "node12"
-  main: "dist/index.js"
+  using: "docker"
+  image: "python:3.8"
+  args:
+    - test args here
 
 branding:
   icon: "type"
