@@ -8,7 +8,7 @@ description: "Test fonts for script and writing system coverage based on CLDR da
 
 runs:
   using: "docker"
-  image: "python:3.8"
+  image: "Dockerfile"
   args:
     - test args here
 
