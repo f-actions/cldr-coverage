@@ -3,7 +3,7 @@ FROM python:3.8
 # set up dependency environment
 RUN apt-get update -y
 RUN apt-get install -y icu-devtools
-RUN export PATH="/usr/local/opt/icu4c/bin:$PATH"
+# RUN export PATH="/usr/local/opt/icu4c/bin:$PATH"
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
