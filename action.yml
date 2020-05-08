@@ -1,0 +1,15 @@
+name: "CLDR Coverage"
+description: "Test fonts for script and writing system coverage based on CLDR data"
+# inputs:
+#   path: # id
+#     description: "Path to build artifact testing directory"
+#     required: false
+#     default: "build"
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
+
+branding:
+  icon: "type"
+  color: "purple"
