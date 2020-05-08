@@ -19,6 +19,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import glob
+import sys
+
+from fontTools.ttLib import TTFont
 from icu import Locale, LocaleData
 
 
@@ -72,11 +76,10 @@ def report(scripts, languages, partial):
 
 
 if __name__ == "__main__":
-    import sys
-    from fontTools.ttLib import TTFont
-
     for fontpath in sys.argv[1:]:
-        print("")
-        font = TTFont(fontpath)
-        print(f"`{fontpath}`:")
-        print(report(*coverage(font)))
+        files = glob.glob(fontpath)
+        for font in files:
+            print("")
+            font = TTFont(fontpath)
+            print(f"`{fontpath}`:")
+            print(report(*coverage(font)))
