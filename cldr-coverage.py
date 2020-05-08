@@ -1,3 +1,4 @@
 #!/usr/bin/env python3
+import sys
 
-print("Hi from Python!")
+print(f"Hi from Python! Here are the args: {sys.argv}")
