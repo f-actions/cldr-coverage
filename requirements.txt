@@ -1,2 +1,2 @@
-fonttools
-pyicu
+fonttools==4.9.0
+pyicu==2.4.3
