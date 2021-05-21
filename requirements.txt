@@ -1,2 +1,2 @@
-fonttools==4.24.0
+fonttools==4.24.3
 pyicu==2.7.3
